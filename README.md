@@ -112,6 +112,19 @@ In the scenario above, we grant read, write, and execute access to users, groups
 - Use `=` to copy access permissions.
 
 
+# Important Commands
+
+**ps**  :  command-line utility for viewing information about processes running on a systemr<br>
+**df**  :  command-line utility for displaying disk space usage on Linux systems<br>
+**du**  :  command-line utility for displaying disk usage of files and directories<br>
+**du -sh directory_name**  :  Displays the total size of the specified directory<br>
+**pwdx process_ID**  :  Dispalys working directory of given process ID<br>
+**scp user@192.168.1.100:/path/to/file /local/destination**  :  Transfer files between hosts<br>
+**ssh [options] [user@]hostname [command]**  :  to connect securely with remote server. Options: are (-p: port), command: after connecting this command will be run automatically on remote server<br>
+**htop**  :  to monitor running processes on realtime<br>
+**htop**  :  displays real-time disk I/O usage by processes<br>
+**netstat**  :  command-line network utility that displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships<br>
+
 
 
 
