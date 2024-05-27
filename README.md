@@ -56,6 +56,18 @@ This repository is created to provide a basic understanding of Linux commands an
 | r--    | Owner: read <br> Group: - <br> Others: -                  |
 | 1      | Symbolic link (hard/soft)                                 |
 
+#### Example
+
+```sh
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ ls -l
+total 8
+-rw-rw-r-- 1 azureuser azureuser 183 May 27 09:56 README.md
+drwxrwxr-x 2 azureuser azureuser 4096 May 27 12:35 next
+```
+
+The number shown after "total" is the sum of the block counts for all files in the directory, divided by 2. This number is typically displayed in units of kilobytes (KB). <br>
+
+For example, if the output shows "total 8", it means that the files in the directory occupy a total of 8 blocks on the disk, which could translate to 4 KB of disk space usage. <br>
 
 
 
