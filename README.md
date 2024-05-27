@@ -69,6 +69,50 @@ The number shown after "total" is the sum of the block counts for all files in t
 
 For example, if the output shows "total 8", it means that the files in the directory occupy a total of 8 blocks on the disk, which could translate to 4 KB of disk space usage. <br>
 
+##### Changing Permissions and Listing Files
+
+```sh
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ chmod 777 next
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ ls -l
+total 8
+-rw-rw-r-- 1 azureuser azureuser  183 May 27 09:56 README.md
+drwxrwxrwx 2 azureuser azureuser 4096 May 27 12:35 next
+```
+
+This is the **Decimal Value Method** for altering the access mode of a file or directory. The value 777 is determined using the table above, granting full access to the directory named 'next'.<br>
+
+##### Changing File Permissions
+
+```sh
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ chmod u+rwx README.md
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ ls -l
+total 8
+-rwxrw-r-- 1 azureuser azureuser  183 May 27 09:56 README.md
+drwxrwxrwx 2 azureuser azureuser 4096 May 27 12:35 next
+
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ chmod g+rwx README.md
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ ls -l
+total 8
+-rwxrwxr-- 1 azureuser azureuser  183 May 27 09:56 README.md
+drwxrwxrwx 2 azureuser azureuser 4096 May 27 12:35 next
+
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ chmod o+rwx README.md
+azureuser@titan3:~/linux-commands/Linux-for-Devops$ ls -l
+total 8
+-rwxrwxrwx 1 azureuser azureuser  183 May 27 09:56 README.md
+drwxrwxrwx 2 azureuser azureuser 4096 May 27 12:35 next
+```
+
+##### Changing File Permissions
+
+In the scenario above, we grant read, write, and execute access to users, groups, and others accordingly. This method allows us to grant access by name. 
+
+- Use `+` to add access.
+- Use `-` to remove access.
+- Use `=` to copy access permissions.
+
+
+
 
 
 
