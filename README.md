@@ -32,4 +32,32 @@ This repository is created to provide a basic understanding of Linux commands an
 
 # File Permission Commands
 
+**chmod**  :  to change the access modes of a file<br>
+**chown**  :  change the owner of the file or directory<br>
+**chgrp**  :  change group of a file or directory<br>
+
+
+### Access Modes Table
+
+| Access Mode | File status       | Directory status      |
+| ----------- | ----------------- | --------------------- |
+| r=4         | Display content   | List the content      |
+| w=2         | Modify            | Create or remove      |
+| x=1         | Execute           | Enter into directory  |
+
+### Permission Symbols Table
+
+| Symbol | Permission                                                 |
+| ------ | ---------------------------------------------------------- |
+| -      | Regular file                                               |
+| d      | Directory                                                  |
+| rxw    | Owner: read, write, execute <br> Group: - <br> Others: -  |
+| r-x    | Owner: read <br> Group: execute <br> Others: read          |
+| r--    | Owner: read <br> Group: - <br> Others: -                  |
+| 1      | Symbolic link (hard/soft)                                 |
+
+
+
+
+
 
