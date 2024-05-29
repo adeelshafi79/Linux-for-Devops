@@ -194,8 +194,6 @@ The `free` command typically outputs the following information:
 - **Available**: Estimated amount of memory available for starting new applications, without swapping.
 - **Swap**: Information about swap space, including total, used, and free swap space.
 
-
-
 In this example:
 
 - The system has a total of 7859 MB of physical RAM.
@@ -203,6 +201,121 @@ In this example:
 - 1306 MB is being shared by shared memory objects.
 - Buffers/cache account for 366 MB, with 2001 MB cached.
 - The system has 2047 MB of swap space, with none currently in use.
+
+
+# Text Manipulation
+
+The sed command, short for "stream editor," is a powerful utility in Linux used for text manipulation. It can perform various operations on text files, such as search and replace, insertion and deletion of lines, and more. Here's a detailed explanation of how to use sed with examples:
+
+The basic syntax of the `free` command is:
+
+```bash
+sed [options] 'command' filename
+```
+## Options
+
+- [options]: Various options that modify the behavior of sed
+- command': The operation to be performed by sed
+- filename: The name of the file to be processed
+
+
+## Common Operations
+- **Search and Replace**
+To substitute text in a file, use the s command followed by the pattern to search for and the replacement text. The g flag stands for global, replacing all occurrences on each line.
+```bash
+# Replace "old_text" with "new_text" in example.txt
+sed 's/old_text/new_text/g' example.txt
+```
+
+- **Insertion and Deletion**
+Use the i command to insert text before a specified line number and the d command to delete specific lines.
+```bash
+# Insert "new_line" before line 5 in example.txt
+sed '5i new_line' example.txt
+
+# Delete line 10 from example.txt
+sed '10d' example.txt
+```
+
+- **Printing**
+Print specific lines or ranges of lines from a file using the p command.
+
+```bash
+# Print lines 1 to 5 of example.txt
+sed -n '1,5p' example.txt
+```
+- **Pattern Matching**
+Perform operations based on pattern matches using regular expressions.
+
+```bash
+# Replace "word" with "replaced" only in lines containing "pattern"
+sed '/pattern/s/word/replaced/g' example.txt
+```
+- **Text Transformation**
+Transform text in various ways using the y command. For example, convert uppercase to lowercase or vice versa.
+
+```bash
+# Convert text to uppercase
+sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/' example.txt
+```
+
+### Example
+
+- Let's consider an example file named "data.txt" containing the following text:
+
+
+```bash
+Hello World
+This is a test file
+for sed command.
+```
+- We can perform various operations on this file using sed:
+```bash
+# Replace "test" with "example"
+sed 's/test/example/g' data.txt
+```
+- sed: Invokes the sed command.
+- s: Indicates a substitution operation.
+- /test/example/: Specifies the pattern to search for (test) and the replacement text (example).
+- g: Stands for global, meaning it replaces all occurrences on each line.
+- data.txt: The file on which the operation is performed.
+
+```bash
+# Insert "New line" before the second line
+sed '2i New line' data.txt
+```
+- 2i: Specifies line number 2 to insert (i) text before.
+- New line: The text to be inserted.
+- data.txt: The file on which the operation is performed.
+
+```bash
+# Delete the third line
+sed '3d' data.txt
+```
+- 3d: Specifies line number 3 to delete (d).
+- data.txt: The file on which the operation is performed.
+
+```bash
+# Print lines 1 to 2
+sed -n '1,2p' data.txt
+```
+- -n: Suppresses automatic printing of pattern space.
+- 1,2p: Specifies a range of lines (from line 1 to line 2) to print (p).
+- data.txt: The file from which lines are printed.
+
+```bash
+# Convert text to uppercase
+sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/' data.txt
+```
+- y: Indicates a transliteration operation.
+- /abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/: Specifies the characters to be replaced with their uppercase equivalents.
+- data.txt: The file on which the operation is performed.
+
+
+
+
+
+
 
 
 
