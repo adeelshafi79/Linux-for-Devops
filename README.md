@@ -153,6 +153,59 @@ Here is a list of essential command-line utilities for managing and monitoring a
 - **`sudo fdisk -l /dev/sda`**: View partitions on a specific disk (e.g., `/dev/sda`).
 - **`sudo fdisk -s /dev/sda`**: View the size of a specific partition (e.g., `/dev/sda`).
 
+## Monitoring memory usage and availability
+The `free` command in Linux is a handy utility used to display information about the system's memory usage and availability. It provides insights into both physical RAM and swap space utilization. Below is a detailed explanation of its usage and output:
+
+The basic syntax of the `free` command is:
+
+```bash
+free [options]
+```
+
+```bash
+$ free -m
+             total       used       free     shared    buffers     cached
+Mem:          7859       2976       1516       1306        366       2001
+-/+ buffers/cache:        607       7252
+Swap:         2047          0       2047
+```
+## Options
+
+- **-b**: Displays memory sizes in bytes.
+- **-k**: Displays memory sizes in kilobytes.
+- **-m**: Displays memory sizes in megabytes (default option).
+- **-g**: Displays memory sizes in gigabytes.
+- **-h**: Provides a "human-readable" output with units (e.g., KB, MB, GB).
+- **-s [seconds]**: Continuously displays memory usage at specified intervals.
+- **-t**: Displays a summary line showing the totals.
+- **-l**: Displays low and high memory statistics.
+- **-o**: Displays old format (without buffer adjustments).
+- **-w**: Wide output, showing more details in the output columns.
+
+## Output Explanation
+
+The `free` command typically outputs the following information:
+
+- **Total**: Total amount of physical RAM in the system.
+- **Used**: Amount of RAM currently being used by the system.
+- **Free**: Amount of RAM not being used by the system at all.
+- **Shared**: Memory used by shared memory objects.
+- **Buffer/Cache**: Memory used by the buffer cache and buffers for file I/O.
+- **Available**: Estimated amount of memory available for starting new applications, without swapping.
+- **Swap**: Information about swap space, including total, used, and free swap space.
+
+
+
+In this example:
+
+- The system has a total of 7859 MB of physical RAM.
+- 2976 MB is currently in use, leaving 1516 MB free.
+- 1306 MB is being shared by shared memory objects.
+- Buffers/cache account for 366 MB, with 2001 MB cached.
+- The system has 2047 MB of swap space, with none currently in use.
+
+
+
 
 
 
