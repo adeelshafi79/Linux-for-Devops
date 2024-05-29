@@ -122,8 +122,21 @@ In the scenario above, we grant read, write, and execute access to users, groups
 **scp user@192.168.1.100:/path/to/file /local/destination**  :  Transfer files between hosts<br>
 **ssh [options] [user@]hostname [command]**  :  to connect securely with remote server. Options: are (-p: port), command: after connecting this command will be run automatically on remote server<br>
 **htop**  :  to monitor running processes on realtime<br>
-**htop**  :  displays real-time disk I/O usage by processes<br>
+**iotop**  :  displays real-time disk I/O usage by processes<br>
 **netstat**  :  command-line network utility that displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships<br>
+**netstat -a**  :  Show both listening and non-listening sockets<br>
+**netstat -at**  :  specifically lists all TCP ports, giving you information about the TCP connections your system is engaged in<br>
+**netstat -au**  :  focuses on UDP ports, revealing details about UDP connections<br>
+**netstat -l**  :  shows only the ports that are actively listening for incoming connections<br>
+**netstat -lt**  :  Narrowing it down further, this command specifically lists the TCP ports that are in a listening state<br>
+**netstat -lu**  :  this command focuses on displaying only the UDP ports that are actively listening<br>
+**netstat -s**  :  provides statistical information for all ports, offering insights into network activity<br>
+**netstat -pt**  :  This option enriches the output by displaying Process ID (PID) and program names associated with network connections<br>
+**netstat -r**  :  This command retrieves kernel routing information, displaying destination addresses, gateways, and interface details<br>
+**netstat -ap | grep ssh**  :  To find the port on which a specific program, in this case, SSH, is running, use this command<br>
+**netstat -an | grep ':80'**  :  This command helps identify the process associated with a given port, such as port 80 in this example<br>
+**netstat -i**  :  Use this command to obtain a list of network interfaces, providing details about each interface’s activities<br>
+
 
 
 
