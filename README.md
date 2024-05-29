@@ -1,42 +1,40 @@
 # Linux-for-Devops
-This repository is created to provide a basic understanding of Linux commands and related notes required for the field of DevOps and Cloud Infrastructure services.
 
+This repository aims to provide a comprehensive understanding of Linux commands essential for DevOps and Cloud Infrastructure services.
 
-# File and Directory Operations Commands
+## File and Directory Operations Commands
 
-**ls**  :  list files and directories<br>
-**ls -l**  :  displays files and directories with detailed information<br>
-**ls -a**  :  shows all files and directories, including hidden files<br>
-**ls -h**  :  displays file sizes in a human-readable format<br>
-**cd**  :  change directory cd /path/to/directory<br>
-**pwd**  :  displays current working directory<br>
-**mkdir**  :  creates a new directory. mkdir new_directory_name<br>
-**rmdir**  :  remove directory<br>
-**rm**  :  remove files <br>
-**cp**  :  copy files and directories<br>
-**mv**  :  Move/rename files and directories<br>
-**touch**  :  create an empty file or update file timestamps<br>
-**cat**  :  view the content of a file<br>
-**cat > file_name**  :  Append and overwrite text in to a file (use CNTRL+D) to exit<br>
-**cat >> file_name**  :  Append without overwriting text in to a file (use CNTRL+D) to exit<br>
-**cat f1 f2 > f3**  :  concatenate texts of files f1 and f2 and creating new file f3 with all text<br>
-**head**  :   Display the first few lines of a file.<br>
-**head -n 5 file_name**  :  Displays the first five lines of the file<br>
-**tail**  :   Display the last few lines of a file.<br>
-**tail -n 5 file_name**  :  Displays the last five lines of the file<br>
-**find**  :  search file by name (-name) / by type (-type)<br>
-**hostname**  :  Displays Machine name<br>
-**hostname -i**  :  Displays the private IP address<br>
-**cat /etc/os-release**  :  Displays OS version and details<br>
-**whoami**  :  Displays current user<br>
+- **`ls`**: Lists files and directories.
+- **`ls -l`**: Displays detailed information about files and directories.
+- **`ls -a`**: Shows all files and directories, including hidden files.
+- **`ls -h`**: Displays file sizes in a human-readable format.
+- **`cd`**: Changes directory.
+- **`pwd`**: Displays the current working directory.
+- **`mkdir`**: Creates a new directory.
+- **`rmdir`**: Removes a directory.
+- **`rm`**: Removes files.
+- **`cp`**: Copies files and directories.
+- **`mv`**: Moves or renames files and directories.
+- **`touch`**: Creates an empty file or updates file timestamps.
+- **`cat`**: Views the content of a file.
+- **`cat > file_name`**: Appends and overwrites text into a file (use CTRL+D to exit).
+- **`cat >> file_name`**: Appends without overwriting text into a file (use CTRL+D to exit).
+- **`cat f1 f2 > f3`**: Concatenates texts of files f1 and f2 into a new file f3.
+- **`head`**: Displays the first few lines of a file.
+- **`head -n 5 file_name`**: Displays the first five lines of the file.
+- **`tail`**: Displays the last few lines of a file.
+- **`tail -n 5 file_name`**: Displays the last five lines of the file.
+- **`find`**: Searches for files by name (-name) or by type (-type).
+- **`hostname`**: Displays the machine name.
+- **`hostname -i`**: Displays the private IP address.
+- **`cat /etc/os-release`**: Displays OS version and details.
+- **`whoami`**: Displays the current user.
 
-# File Permission Commands
+## File Permission Commands
 
-**chmod**  :  to change the access modes of a file<br>
-**chown**  :  change the owner of the file or directory<br>
-**chgrp**  :  change group of a file or directory<br>
-
-
+- **`chmod`**: Changes the access modes of a file.
+- **`chown`**: Changes the owner of the file or directory.
+- **`chgrp`**: Changes the group of a file or directory.
 ### Access Modes Table
 
 | Access Mode | File status       | Directory status      |
@@ -114,28 +112,47 @@ In the scenario above, we grant read, write, and execute access to users, groups
 
 # Important Commands
 
-**ps**  :  command-line utility for viewing information about processes running on a systemr<br>
-**df**  :  command-line utility for displaying disk space usage on Linux systems<br>
-**du**  :  command-line utility for displaying disk usage of files and directories<br>
-**du -sh directory_name**  :  Displays the total size of the specified directory<br>
-**pwdx process_ID**  :  Dispalys working directory of given process ID<br>
-**scp user@192.168.1.100:/path/to/file /local/destination**  :  Transfer files between hosts<br>
-**ssh [options] [user@]hostname [command]**  :  to connect securely with remote server. Options: are (-p: port), command: after connecting this command will be run automatically on remote server<br>
-**htop**  :  to monitor running processes on realtime<br>
-**iotop**  :  displays real-time disk I/O usage by processes<br>
-**netstat**  :  command-line network utility that displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships<br>
-**netstat -a**  :  Show both listening and non-listening sockets<br>
-**netstat -at**  :  specifically lists all TCP ports, giving you information about the TCP connections your system is engaged in<br>
-**netstat -au**  :  focuses on UDP ports, revealing details about UDP connections<br>
-**netstat -l**  :  shows only the ports that are actively listening for incoming connections<br>
-**netstat -lt**  :  Narrowing it down further, this command specifically lists the TCP ports that are in a listening state<br>
-**netstat -lu**  :  this command focuses on displaying only the UDP ports that are actively listening<br>
-**netstat -s**  :  provides statistical information for all ports, offering insights into network activity<br>
-**netstat -pt**  :  This option enriches the output by displaying Process ID (PID) and program names associated with network connections<br>
-**netstat -r**  :  This command retrieves kernel routing information, displaying destination addresses, gateways, and interface details<br>
-**netstat -ap | grep ssh**  :  To find the port on which a specific program, in this case, SSH, is running, use this command<br>
-**netstat -an | grep ':80'**  :  This command helps identify the process associated with a given port, such as port 80 in this example<br>
-**netstat -i**  :  Use this command to obtain a list of network interfaces, providing details about each interface’s activities<br>
+Here is a list of essential command-line utilities for managing and monitoring a Linux system:
+
+## Process Management
+- **`ps`**: View information about running processes.
+
+## Disk Usage
+- **`df`**: Display disk space usage.
+- **`du`**: Show disk usage of files and directories.
+  - **`du -sh directory_name`**: Display the total size of the specified directory.
+
+## Process Information
+- **`pwdx process_ID`**: Display the working directory of the specified process ID.
+
+## File Transfer and Remote Connection
+- **`scp user@192.168.1.100:/path/to/file /local/destination`**: Transfer files between hosts.
+- **`ssh [options] [user@]hostname [command]`**: Securely connect to a remote server. Options include `-p` for port specification. You can run a command automatically on the remote server after connecting.
+
+## System Monitoring
+- **`htop`**: Monitor running processes in real-time.
+- **`iotop`**: Display real-time disk I/O usage by processes.
+
+## Network Utilities
+- **`netstat`**: Display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+  - **`netstat -a`**: Show both listening and non-listening sockets.
+  - **`netstat -at`**: List all TCP ports.
+  - **`netstat -au`**: List all UDP ports.
+  - **`netstat -l`**: Show only listening ports.
+  - **`netstat -lt`**: Show only listening TCP ports.
+  - **`netstat -lu`**: Show only listening UDP ports.
+  - **`netstat -s`**: Provide statistical information for all ports.
+  - **`netstat -pt`**: Display Process ID (PID) and program names associated with network connections.
+  - **`netstat -r`**: Retrieve kernel routing information.
+  - **`netstat -ap | grep ssh`**: Find the port on which SSH is running.
+  - **`netstat -an | grep ':80'`**: Identify the process associated with port 80.
+  - **`netstat -i`**: Obtain a list of network interfaces and their activities.
+
+## Disk Partitioning
+- **`sudo fdisk -l`**: View all disk partitions.
+- **`sudo fdisk -l /dev/sda`**: View partitions on a specific disk (e.g., `/dev/sda`).
+- **`sudo fdisk -s /dev/sda`**: View the size of a specific partition (e.g., `/dev/sda`).
+
 
 
 
