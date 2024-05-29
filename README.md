@@ -205,9 +205,9 @@ In this example:
 
 # Text Manipulation
 
-The sed command, short for "stream editor," is a powerful utility in Linux used for text manipulation. It can perform various operations on text files, such as search and replace, insertion and deletion of lines, and more. Here's a detailed explanation of how to use sed with examples:
+1- The sed command, short for "stream editor," is a powerful utility in Linux used for text manipulation. It can perform various operations on text files, such as search and replace, insertion and deletion of lines, and more. Here's a detailed explanation of how to use sed with examples:
 
-The basic syntax of the `free` command is:
+The basic syntax of the `sed` command is:
 
 ```bash
 sed [options] 'command' filename
@@ -311,8 +311,18 @@ sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/' data.txt
 - /abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/: Specifies the characters to be replaced with their uppercase equivalents.
 - data.txt: The file on which the operation is performed.
 
+2- The awk command is a versatile text processing tool in Linux that allows you to perform various operations on text files, such as searching, filtering, transforming, and reporting. Here's a detailed explanation of how to use awk with examples:
 
 
+The basic syntax of the `awk` command is:
+
+```bash
+awk 'pattern { action }' filename
+```
+
+- pattern: Specifies a condition or pattern to match lines.
+- { action }: Defines the action to be performed on lines that match the pattern.
+- filename: The input file on which the awk command operates.
 
 
 
